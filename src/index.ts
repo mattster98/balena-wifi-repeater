@@ -1,6 +1,7 @@
 import * as blinking from 'blinking';
 import {
-  createAccessPoint,
+//  createAccessPoint,
+  createBridge,
   connectToWifi,
   checkNMConnectivity,
   getWiFiDevices,
@@ -47,9 +48,7 @@ const LED_ERROR_PATTERNS = {
     return;
   }
 
-  import { createBridge, /* ... */ } from "./nm";
-
-  // Instead of createAccessPoint:
+    // Instead of createAccessPoint:
   console.log(`Creating bridge br0 with eth0 and ${accessPoint.iface} as AP...`);
   await createBridge('br0', [
   { iface: 'eth0', type: 'ethernet' },
