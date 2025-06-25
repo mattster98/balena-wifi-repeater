@@ -1,6 +1,6 @@
 import * as blinking from 'blinking';
 import {
-  createAccessPoint,
+  //createAccessPoint,
   createBridge,
   connectToWifi,
   checkNMConnectivity,
@@ -48,15 +48,21 @@ const LED_ERROR_PATTERNS = {
     return;
   }
 
-    // Instead of createAccessPoint:
-  console.log(`Creating bridge br0 with eth0 and ${accessPoint.iface} as AP...`);
+    // Instead of createAccessPoint, creatBridge:
+console.log(`Creating bridge br0 with eth0 and ${accessPoint.iface} as AP...`);
+try {
   await createBridge('br0', [
-  { iface: 'eth0', type: 'ethernet' },
-  { iface: accessPoint.iface, type: 'wireless', ssid: AP_SSID, password: AP_PASSWORD }
+    { iface: 'eth0', type: 'ethernet' },
+    { iface: accessPoint.iface, type: 'wireless', ssid: AP_SSID, password: AP_PASSWORD }
   ]);
+} catch (e) {
+  console.error("Bridge creation failed:", e, JSON.stringify(e));
+  led.pattern.start({ blinks: LED_ERROR_PATTERNS.NO_AP_CAPABLE_DEVICE, pause: 1000 });
+  return;
+}
   
-  console.log(`Creating WiFi AP on ${accessPoint.iface} with SSID "${AP_SSID}" and password "${AP_PASSWORD}"...`);
-  await createAccessPoint({ iface: accessPoint.iface, ssid: AP_SSID, password: AP_PASSWORD });
+  //console.log(`Creating WiFi AP on ${accessPoint.iface} with SSID "${AP_SSID}" and password "${AP_PASSWORD}"...`);
+  //await createAccessPoint({ iface: accessPoint.iface, ssid: AP_SSID, password: AP_PASSWORD });
 
   // Use secondary wireless device for internet if ethernet doesn't do the job.
   if (!ethernet) {
