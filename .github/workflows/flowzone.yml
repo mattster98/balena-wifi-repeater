@@ -19,6 +19,13 @@ jobs:
       - name: Checkout main branch
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: npm install
+  
       - name: Update balena.yml
         uses: balena-io-experimental/balena.yml-action@main
         with:
