@@ -30,7 +30,7 @@ For `Repeater` mode it needs:
 
 # Usage
 
-This uses the click to deploy [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mattster98/balena-wifi-repeater/edit/bridge-mode) (https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mattster98/balena-wifi-repeater/edit/bridge-mode) approach. 
+This uses the click to deploy [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mattster98/balena-wifi-repeater/tree/bridge-mode) (https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mattster98/balena-wifi-repeater/tree/bridge-mode) approach. 
 
 ## Mode: Access Point
 
