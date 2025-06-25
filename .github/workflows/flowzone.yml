@@ -30,5 +30,5 @@ jobs:
       - name: Deploy to Balena
         uses: balena-io/deploy-to-balena-action@master
         with:
-          balena_token: ${{ secrets.BALENA_API_KEY }}
+          balena_token: ${{ secrets.balena_token }}
           fleet: ${{ env.BALENA_APP }}
