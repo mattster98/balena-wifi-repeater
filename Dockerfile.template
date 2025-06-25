@@ -15,6 +15,6 @@ RUN install_packages dbus
 WORKDIR /usr/src
 COPY . .
 COPY --from=builder /usr/src .
-RUN npm install && npm run build
+RUN rm -rf node_modules/ /usr/src/node_modules/ && npm ci && npm run build
 
 CMD [ "node", "/usr/src/build/index.js" ]
