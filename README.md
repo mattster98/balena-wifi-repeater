@@ -11,6 +11,8 @@ WiFi Repeater can work in the following modes:
 
 ## How it works
 
+THIS HAS BEEN MODIFIED TO SIMPLY ACT LIKE AN ACTUAL AP AND BRIDGE THE ETHERNET AND WIFI INTERFACES
+
 WiFi Repeater will automatically scan your network and check each device's capabilities. It will then attempt to configure the devices to work in `Access Point` mode and if that is not possible it will switch to `Repeater` mode. You *do not* need to pre configure the device to work in either mode.
 
 For `Access Point` mode it needs:
