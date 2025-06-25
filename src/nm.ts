@@ -140,4 +140,3 @@ export const connectToWifi = async (network: WirelessNetwork): Promise<any> => {
     const connectionParams = [
       ['connection', [
         ['id](#)*
-
