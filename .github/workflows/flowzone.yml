@@ -8,7 +8,7 @@ on:
       - 'docs/**'
 
 env:
-  BALENA_APP: balenalabs/wifi-repeater
+  BALENA_APP: gh_mattster98/balena-wifi-repeater
 
 jobs:
   build:
