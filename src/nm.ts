@@ -28,7 +28,7 @@ export interface WirelessNetwork {
 
 const nm: string = 'org.freedesktop.NetworkManager';
 
-// --------- BRIDGE MODE SUPPORT ---------
+// -------- BRIDGE MODE SUPPORT --------
 
 /**
  * Create a bridge and add specified interfaces as ports.
