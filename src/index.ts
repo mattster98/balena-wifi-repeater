@@ -1,6 +1,6 @@
 import * as blinking from 'blinking';
 import {
-//  createAccessPoint,
+  createAccessPoint,
   createBridge,
   connectToWifi,
   checkNMConnectivity,
@@ -55,8 +55,8 @@ const LED_ERROR_PATTERNS = {
   { iface: accessPoint.iface, type: 'wireless', ssid: AP_SSID, password: AP_PASSWORD }
   ]);
   
-  //console.log(`Creating WiFi AP on ${accessPoint.iface} with SSID "${AP_SSID}" and password "${AP_PASSWORD}"...`);
-  //await createAccessPoint({ iface: accessPoint.iface, ssid: AP_SSID, password: AP_PASSWORD });
+  console.log(`Creating WiFi AP on ${accessPoint.iface} with SSID "${AP_SSID}" and password "${AP_PASSWORD}"...`);
+  await createAccessPoint({ iface: accessPoint.iface, ssid: AP_SSID, password: AP_PASSWORD });
 
   // Use secondary wireless device for internet if ethernet doesn't do the job.
   if (!ethernet) {
